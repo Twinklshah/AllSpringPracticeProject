@@ -1,0 +1,20 @@
+package com.user.in.modal;
+
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
+@Data
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Enity
+@Table(name="user_master")
+public class User {
+	@Id
+	@Column(name="id")
+	@Column(name="first_name")
+	@Column(name="last_name")
+	@Column(name="mobile")
+	@Column(name="address")
+}

@@ -1,0 +1,34 @@
+package com.user.in.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.user.in.modal.User;
+import com.user.in.repository.UserRespository;
+import com.user.in.service.UserService;
+
+public class UserServiceImpl implements UserService {
+	
+	@Autowired
+	UserRespository userRepository;
+
+	@Override
+	public User saveUser(User user) {
+		User user = userRepository.save(user);
+		return null;
+	}
+
+	@Override
+	public List<User> fetchAllUser() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public User fetchByUserId(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

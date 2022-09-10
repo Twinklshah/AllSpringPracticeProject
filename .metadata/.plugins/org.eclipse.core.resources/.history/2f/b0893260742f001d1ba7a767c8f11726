@@ -1,0 +1,11 @@
+package com.user.in.service;
+
+import java.util.List;
+
+import com.user.in.modal.User;
+
+public interface UserService {
+	User saveUser(User user);
+
+	List<User> fetchAllUser();
+}

@@ -1,0 +1,7 @@
+package com.user.in.service;
+
+import com.user.in.modal.User;
+
+public interface UserService {
+	User saveUser(User user);
+}
