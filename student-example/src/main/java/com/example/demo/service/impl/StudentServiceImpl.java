@@ -25,11 +25,11 @@ public class StudentServiceImpl implements StudentService{
 	
     
     public Student saveStudent(Student student) {
-    	
+    	log.info("student name created");
     	return studentRepository.save(student);
     }
     
-    public List<Student> listOfStudent(List<Student> students){
+    public List<Student> saveAllStudents(List<Student> students){
     	return studentRepository.saveAll(students);
     }
 
@@ -41,11 +41,6 @@ public class StudentServiceImpl implements StudentService{
     	return studentRepository.findById(Id);
     }
 
-	@Override
-	public List<Student> listOfStudent() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	@Override
 	public List<Student> getStudentById() {

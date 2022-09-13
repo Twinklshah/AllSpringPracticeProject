@@ -1,5 +1,7 @@
 package com.example.demo.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,7 +16,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Table(name="Student_data")
 @Entity
-public class Student {
+public class Student implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	
@@ -22,13 +29,13 @@ public class Student {
 	private Long studentId;
 	
 	@Column(name="Student_firstName")
-	private String StudentFirstName;
+	private String studentFirstName;
 	
 	@Column(name="Student_lastName")
-	private String StudentLastName;
+	private String studentLastName;
 	
 	@Column(name="Student_RollNo")
-	private Integer StudentRollNo;
+	private Integer studentRollNo;
 	
 	
 	

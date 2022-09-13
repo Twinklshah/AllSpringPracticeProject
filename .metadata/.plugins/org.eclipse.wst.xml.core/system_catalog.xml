@@ -10,4 +10,7 @@
   <system systemId="http://www.w3.org/2001/xml.xsd" uri="jar:file:/C:/Twinkle/Software/sts-4.15.3.RELEASE/plugins/org.eclipse.xsd_2.18.0.v20220312-1031.jar!/cache/www.w3.org/2001/xml.xsd"/>
   <uri name="http://www.w3.org/2001/XMLSchema" uri="jar:file:/C:/Twinkle/Software/sts-4.15.3.RELEASE/plugins/org.eclipse.xsd_2.18.0.v20220312-1031.jar!/cache/www.w3.org/2001/XMLSchema.xsd"/>
   <public publicId="-//LOG4J//DTD LOG4J//EN" uri="jar:file:/C:/Twinkle/Software/sts-4.15.3.RELEASE/plugins/org.springsource.ide.eclipse.commons.ui_4.15.3.202208110704.jar!/dtd/log4j-1.2.dtd" webURL="https://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd"/>
+  <public id="ruleset_2_0_0" publicId="http://pmd.sourceforge.net/ruleset/2.0.0" uri="jar:file:/C:/Twinkle/Software/sts-4.15.3.RELEASE/configuration/org.eclipse.osgi/588/0/.cp/target/lib/pmd-core.jar!/ruleset_2_0_0.xsd"/>
+  <public id="report_2_0_0" publicId="http://pmd.sourceforge.net/report/2.0.0" uri="jar:file:/C:/Twinkle/Software/sts-4.15.3.RELEASE/configuration/org.eclipse.osgi/588/0/.cp/target/lib/pmd-core.jar!/report_2_0_0.xsd"/>
+  <public id="rule-tests_1_0_0" publicId="http://pmd.sourceforge.net/rule-tests" uri="jar:file:/C:/Twinkle/Software/sts-4.15.3.RELEASE/plugins/net.sourceforge.pmd.eclipse.plugin_4.38.0.v20220831-1801-r.jar!/target/schema/rule-tests_1_0_0.xsd"/>
 </catalog>

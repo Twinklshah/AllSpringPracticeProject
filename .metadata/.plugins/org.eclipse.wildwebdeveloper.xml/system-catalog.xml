@@ -11,4 +11,7 @@
 <uri name="http://www.w3.org/2001/XMLSchema" uri="file:///C:/Twinkle/Software/sts-4.15.3.RELEASE/configuration/org.eclipse.osgi/493/0/.cp/cache/www.w3.org/2001/XMLSchema.xsd"/>
 <system systemId="http://www.w3.org/2001/xml.xsd" uri="file:///C:/Twinkle/Software/sts-4.15.3.RELEASE/configuration/org.eclipse.osgi/493/0/.cp/cache/www.w3.org/2001/xml.xsd"/>
 <public publicId="-//LOG4J//DTD LOG4J//EN" uri="file:///C:/Twinkle/Software/sts-4.15.3.RELEASE/configuration/org.eclipse.osgi/581/0/.cp/dtd/log4j-1.2.dtd"/>
+<public publicId="http://pmd.sourceforge.net/ruleset/2.0.0" uri="file:///C:/Twinkle/Software/sts-4.15.3.RELEASE/configuration/org.eclipse.osgi/588/0/.cp/ruleset_2_0_0.xsd"/>
+<public publicId="http://pmd.sourceforge.net/report/2.0.0" uri="file:///C:/Twinkle/Software/sts-4.15.3.RELEASE/configuration/org.eclipse.osgi/588/0/.cp/report_2_0_0.xsd"/>
+<public publicId="http://pmd.sourceforge.net/rule-tests" uri="file:///C:/Twinkle/Software/sts-4.15.3.RELEASE/configuration/org.eclipse.osgi/588/0/.cp/target/schema/rule-tests_1_0_0.xsd"/>
 </catalog>

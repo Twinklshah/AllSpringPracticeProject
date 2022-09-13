@@ -24,18 +24,18 @@ public class StudentController {
 		 return studentService.saveStudent(student);
 	}
 	
-	@PostMapping("/list-of-Student")
-	public List<Student> listofStudent(@RequestBody Student students){
-		 return studentService.listOfStudent();
+	@PostMapping("/saveAllStudent")
+	public List<Student> listofStudent(@RequestBody List<Student> student){
+		 return studentService.saveAllStudents(student);
 		 
 	}
 	@GetMapping("/get-student")
-	public List<Student> getAllStudent(@RequestBody Student stud){
+	public List<Student> getAllStudent(){
 		return studentService.getAllStudent();
 		}
 	
 	@GetMapping("/getStudentByID")
-	public List<Student> getStudentById(@RequestBody Student stud){
+	public List<Student> getStudentById(){
 		return studentService.getStudentById();
 	}
 

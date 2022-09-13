@@ -11,7 +11,7 @@ public interface StudentService {
 	
 Student saveStudent(Student student);
 
-List<Student> listOfStudent();
+List<Student> saveAllStudents(List<Student> students);
 
 List<Student> getAllStudent();
 
