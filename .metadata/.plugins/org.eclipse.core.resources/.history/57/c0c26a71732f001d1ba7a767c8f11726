@@ -1,5 +1,0 @@
-package com.user.in.service.impl;
-
-public class UserServiceImpl implements UserService {
-
-}

@@ -1,7 +1,10 @@
 package com.example.demo.service.impl;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
+
+import javax.persistence.EntityNotFoundException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,63 +15,65 @@ import com.example.demo.service.DepartmentService;
 
 @Service
 public class DepartmentServiceImpl implements DepartmentService {
-    
 	@Autowired
     DepartmentRepository repository;
 	
+	@Override
 	public Department saveDepartment(Department dep) {
 		return repository.save(dep);
 	}
 	
+	@Override
 	public List<Department> fetchAllDepartment() {
 		return repository.findAll();
 	}
     
-	public Optional<Department> getDepartmentById(Long id) {
-		return repository.findById(id);
+	@Override
+	public Department getDepartmentById(Long id) {
+		Optional<Department> dept =  repository.findById(id);
+		if(dept.isPresent()) {
+			return dept.get();
+		} 
+		
+		throw new EntityNotFoundException("Department not found "+id);
+		 
 	}
 	
-	public Department getDepartmentByName(String name) { // get
+	@Override
+	public List<Department> getDepartmentByName(String name) { // get
 		return repository.findByDepartmentName(name);
 	}
 
-	public String delDepartment(Long id) { // delete
+	@Override
+	public String deleteDepartment(Long id) {
 		repository.deleteById(id);
-		return "product deleted"  + id;
-
+		return "Department got deleted" + id;
 	}
-	
-//	public Department updateDepartment(Department department) throws Exception {
-//		if(department.getId()!=null) {
-//			return repository.save(department);
-//			
-//		}
-//		throw new Exception("please enter id to update");
-//	
-//		
-//		
-//		
-//	}
-//	@Override
-////	public Department saveDepartment() {
-////		// TODO Auto-generated method stub
-////		return null;
-////	}
 
 	@Override
-	public Department getProductByName(String name) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Department> getDepartmentByHead(String name) {
+		 return repository.findByDepartmentHead(name);
 	}
 
-//	@Override
-//	public Department getProductByName(String name) {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
+	@Override
+	public List<Department> getDepartmentisActive() {
+		
+		return repository.findByIsActive(true);
+	}
 
+	@Override
+	public List<Department> getByIsActive(Boolean isActive) {
+		return repository.findByIsActive(isActive);
+	}
 
-
+	@Override
+	public void deletbyId(Long departmentId) {
+		repository.deleteById(departmentId);
+	}
 
 	
+
+
+
+
 }
