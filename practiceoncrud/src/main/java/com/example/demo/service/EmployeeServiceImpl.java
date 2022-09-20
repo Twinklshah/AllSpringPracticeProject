@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.example.demo.custom.exception.BusinessException;
+import com.example.demo.custom.exception.EmptyInputException;
 import com.example.demo.model.Employee;
 import com.example.demo.repository.EmployeeRepository;
 
@@ -19,8 +21,15 @@ public class EmployeeServiceImpl implements EmployeeService{
 	@Autowired
 	EmployeeRepository employeeRepository;
 	
+	
+	
 	public Employee saveEmployee(Employee emp) {
-	      return employeeRepository.save(emp);
+		if(emp.getEmpName().isEmpty() || emp.getEmpName().length()==0) {
+			throw new EmptyInputException("601","inputs fields are empty");
+		}
+		Employee saveemployee =employeeRepository.save(emp);
+		
+	      return saveemployee;
 	}
 	
 	public List<Employee> allEmployee(List<Employee> emp){
