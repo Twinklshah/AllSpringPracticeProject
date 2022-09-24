@@ -45,7 +45,7 @@ public class EmployeeServiceImpl implements EmployeeService{
 	{ 
 		Optional<Employee> emp=employeeRepository.findById(id);
 		if(emp.isPresent()) {
-			return emp.get(); ///wowwwwww yaaaaar mast se samjha
+			return emp.get(); ///wowwwwww yaaaaar mast se samjha.
 			}
 		throw new Exception("id not found");
 		
@@ -61,7 +61,7 @@ public class EmployeeServiceImpl implements EmployeeService{
 		if(emp.getEmpId()!=null) {
 		  Optional<Employee> employee= employeeRepository.findById(emp.getEmpId()); //database
 		  if(employee.isPresent()) {
-			  Employee empDB = employee.get();  
+//			  Employee empDB = employee.get();  
 			  
 //			  empdDb {
 //				  
@@ -72,13 +72,13 @@ public class EmployeeServiceImpl implements EmployeeService{
 //			  }
 			  
 			  if(emp.getEmpName() != null) {         //ache se samjha yeah yeah
-				  empDB.setEmpName(emp.getEmpName());  //update 
+				  employee.get().setEmpName(emp.getEmpName());  //update 
 			  }
 			  if(emp.getEmpDepartment()!=null) {
-				  empDB.setEmpDepartment(emp.getEmpDepartment());
+				  employee.get().setEmpDepartment(emp.getEmpDepartment());
 			  }
 			 
-			return employeeRepository.save(empDB);
+			return employeeRepository.save(emp);
 		  }
 		  
 		}

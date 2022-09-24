@@ -8,6 +8,7 @@ import javax.persistence.EntityNotFoundException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import com.example.demo.model.Department;
 import com.example.demo.repository.DepartmentRepository;
@@ -17,6 +18,12 @@ import com.example.demo.service.DepartmentService;
 public class DepartmentServiceImpl implements DepartmentService {
 	@Autowired
     DepartmentRepository repository;
+	
+	
+	//RestTemplate restTemplate = new RestTemplate(); /// samjha baba
+	
+	@Autowired
+	RestTemplate template;
 	
 	@Override
 	public Department saveDepartment(Department dep) {
@@ -31,7 +38,10 @@ public class DepartmentServiceImpl implements DepartmentService {
 	@Override
 	public Department getDepartmentById(Long id) {
 		Optional<Department> dept =  repository.findById(id);
+		
 		if(dept.isPresent()) {
+			
+			template.getForObject("http://localhost:8080/user/department/"+id,Department[].class );
 			return dept.get();
 		} 
 		
