@@ -1,0 +1,20 @@
+spring:
+  cache:
+    type: redis
+  redis:
+    host: localhost
+    port: '6379'  
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    url: jdbc:postgresql://127.0.0.1/UserPdf
+    password: 'twinkle@123'
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: 'true'
+    hibernate:
+      ddl-auto: update
+server:
+  port: '8080'

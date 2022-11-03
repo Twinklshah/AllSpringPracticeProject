@@ -1,6 +1,6 @@
 package com.example.demo.service;
 
-import java.util.List;
+import org.springframework.data.domain.Page;
 
 import com.example.demo.dto.UserDTO;
 import com.example.demo.model.Department;
@@ -9,7 +9,7 @@ public interface DepartmentService {
 	
 	public Department saveDepartment(Department department);
 
-	public List<Department> getAllDepartment();
+	public Page<Department> getAllDepartment(int page,int size );
 	
 	public UserDTO[] getDepartmentById(Long id) throws Exception;
 	
